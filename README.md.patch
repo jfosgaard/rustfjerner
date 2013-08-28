@@ -1,0 +1,78 @@
+From 6aaf97847e152f70b08a57c237a03e9907d4e0d3 Mon Sep 17 00:00:00 2001
+From: jesperfosgaard <jesperfosgaard@10.154.1.167>
+Date: 28-08-2013 12:06:58
+
+start
+
+diff --git a/src/Model/Tilmelding.java b/src/Model/Tilmelding.java
+new file mode 100644
+index 0000000..44ded9d
+--- /dev/null
++++ b/src/Model/Tilmelding.java
+@@ -0,0 +1,66 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package Model;
++
++import java.sql.Date;
++
++/**
++ *
++ * @author jesperfosgaard
++ */
++public class Tilmelding {
++    
++    private  int id;
++    private Date dato;
++    private int tilmeldinger;
++
++    public Tilmelding(Date dato, int tilmeldinger) {
++        this.dato = dato;
++        this.tilmeldinger = tilmeldinger;
++    }
++    
++    public Tilmelding(int id, Date dato, int tilmeldinger) {
++        this.id = id;
++        this.dato = dato;
++        this.tilmeldinger = tilmeldinger;
++    }
++
++    public int getId() {
++        return id;
++    }
++
++    public void setId(int id) {
++        this.id = id;
++    }
++
++    public Date getDato() {
++        return dato;
++    }
++
++    public void setDato(Date dato) {
++        this.dato = dato;
++    }
++
++    public int getTilmeldinger() {
++        return tilmeldinger;
++    }
++
++    public void setTilmeldinger(int tilmeldinger) {
++        this.tilmeldinger = tilmeldinger;
++    }
++
++     public String toDBString() {
++         return ("\'" + id
++                + "\',\'" + dato
++                + "\',\'" + tilmeldinger
++                +  "\'" 
++               
++               );
++    }
++    
++    
++    
++    
++}
